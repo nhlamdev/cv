@@ -2,24 +2,26 @@ import { BsFacebook } from 'react-icons/bs'
 import { AiFillGoogleCircle, AiFillGithub } from 'react-icons/ai'
 import { techSkill } from '@/constant'
 
+const MAIN_FRONTEND_DOMAIN = process.env.MAIN_FRONTEND_DOMAIN
+
 export const RootContainer = () => {
   return (
     <main className='flex flex-col'>
       <header
         className='h-screen w-screen relative bg-slate-100
-    bg-blend-multiply bg-cover bg-fixed bg-center bg-no-repeat'
+            bg-blend-multiply bg-cover bg-fixed bg-center bg-no-repeat'
         style={{
-          backgroundImage: 'url("/background/OIG (2).jfif")'
+          backgroundImage: `url("/background/header.jfif")`
         }}
       >
         <div className='flex flex-row absolute top-4 left-4 items-center'>
           <a
-            href={'/'}
+            href={MAIN_FRONTEND_DOMAIN}
             className='w-[100px] md:w-[100px] h-[100px] md:h-[100px] relative 
         bg-slate-200 rounded-full'
           >
             <img
-              src='/logo/logo-none-crop.png'
+              src={`${MAIN_FRONTEND_DOMAIN}/logo/logo-none-crop.png`}
               sizes='100vw'
               alt='logo'
               style={{ filter: 'drop-shadow(5px 5px 5px #222)' }}
@@ -63,7 +65,7 @@ export const RootContainer = () => {
         </div>
         {/* ------------- */}
         <img
-          src='/svg/code-think.svg'
+          src={`/svg/code-think.svg`}
           className='hidden md:block'
           style={{
             position: 'absolute',

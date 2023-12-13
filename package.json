@@ -1,7 +1,7 @@
 {
   "main": "index.jsx",
   "scripts": {
-    "dev": "webpack-dev-server --mode development",
+    "dev": "webpack-dev-server --port 3001 --mode development",
     "build": "webpack --mode production",
     "build:analyze": "webpack --mode production --env analyze",
     "preview": "serve -s -p 3001 dist",

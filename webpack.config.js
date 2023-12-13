@@ -35,7 +35,7 @@ module.exports = (env, argv) => {
       new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash].css'
       }),
-      new Dotenv({ path: isProduction ? '.env.production' : '.env.development' }),
+      new Dotenv({ path: isProduction ? './.env.production' : './.env.development' }),
       new CopyWebpackPlugin({
         patterns: [
           {
@@ -149,7 +149,6 @@ module.exports = (env, argv) => {
       hot: true,
       open: true,
       historyApiFallback: true,
-      port: 3001,
       static: {
         directory: path.join(__dirname, 'public'),
         serveIndex: true,
