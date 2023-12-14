@@ -20,5 +20,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "vendor.ts", "types"]
+  "include": ["src", "types"]
 }
