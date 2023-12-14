@@ -1,0 +1,7 @@
+export * from './contact-me'
+export * from './header'
+export * from './position'
+export * from './summary'
+export * from './technical'
+export * from './why-make'
+export * from './work-cycle'
