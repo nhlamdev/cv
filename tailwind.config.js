@@ -10,8 +10,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-toolbox-bg':
-          'linear-gradient(to right, #071e3d, #061f41, #052144, #032248, #02244c, #022650, #022753, #022957, #042b5c, #082d61, #0c2f66, #10316b)'
+        'summary-gradient': 'linear-gradient(to right top, #d1913c, #dda152, #e8b168, #f4c17e, #ffd194);'
       }
     }
   },

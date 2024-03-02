@@ -1,4 +1,4 @@
-import { HeaderComponent } from '@/components'
+import { HeaderComponent, TechnicalSkillsComponent, ExperienceComponent } from '@/components'
 import { SummaryComponent } from '@/components/summary'
 
 export const RootContainer = () => {
@@ -6,6 +6,8 @@ export const RootContainer = () => {
     <main className='flex flex-col'>
       <HeaderComponent />
       <SummaryComponent />
+      <TechnicalSkillsComponent />
+      <ExperienceComponent />
     </main>
   )
 }
