@@ -1,74 +1,59 @@
-const MAIN_FRONTEND_DOMAIN = process.env.MAIN_FRONTEND_DOMAIN
+import { FaFacebook, FaGithub, FaPhoneAlt } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
 export const HeaderComponent = () => {
   return (
     <header
-      className='h-screen w-screen relative bg-slate-100
-      bg-blend-multiply bg-cover bg-fixed bg-center bg-no-repeat'
+      className='w-screen h-screen flex items-center justify-center bg-slate-400
+    bg-blend-multiply bg-cover bg-fixed bg-center bg-no-repeat'
       style={{
         backgroundImage: `url("/background/header.jfif")`
       }}
     >
-      <div className='flex flex-row absolute top-4 left-4 items-center'>
-        <a
-          href={MAIN_FRONTEND_DOMAIN}
-          className='w-[100px] md:w-[100px] h-[100px] md:h-[100px] relative 
-  bg-slate-200 rounded-full'
-        >
-          <img
-            src={`${MAIN_FRONTEND_DOMAIN}/logo/logo-none-crop.png`}
-            sizes='100vw'
-            alt='logo'
-            style={{ filter: 'drop-shadow(5px 5px 5px #222)' }}
-          />
-        </a>
-      </div>
       <div
-        className='bottom-5 w-[400px] sm:w-[500px] md:w-[580px] h-fit'
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          position: 'absolute',
-          background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%)',
-          left: '10px',
-          backgroundColor: '#00000040',
-          boxShadow: '5px 4px 4px 0px rgba(0, 0, 0, 0.25)',
-          backdropFilter: 'blur(2.5px)',
-          padding: '40px 20px',
-          borderRadius: '10px'
-        }}
+        className='flex flex-row gap-4 py-4 px-8 rounded-md bg-slate-200 bg-opacity-20 
+      backdrop-filter backdrop-blur-lg'
       >
-        <span
-          className='text-lg sm:text-2xl md:text-3xl italic'
-          style={{
-            background: 'linear-gradient(149deg, rgba(39, 174, 96, 0.80) 0%, rgba(236, 180, 182, 0.80) 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}
-        >
-          Code your way to the future
-          <br />
-          with passion and perseverance !
-        </span>
+        <img
+          src='/image/avatar.jpg'
+          alt='avatar'
+          className='rounded-full size-48 shadow-md'
+          style={{ border: '4px solid black' }}
+        />
+
+        <div className='flex flex-col justify-around'>
+          <div className='flex flex-col gap-1'>
+            <span className='text-2xl bold text-slate-100'>Nguyễn Hoàng Lâm</span>
+            <span className='text-sm italic text-slate-100'>25 year old</span>
+          </div>
+
+          <div className='flex flex-col gap-1'>
+            <div
+              className='flex flex-row items-center gap-2 bg-slate-200 rounded-md 
+            bg-opacity-40 p-1 shadow-sm'
+            >
+              <FaPhoneAlt className='text-xl' />
+              <span className='text-sm font-semibold'>+84367695329</span>
+            </div>
+            <div
+              className='flex flex-row items-center gap-2 bg-slate-200 rounded-md 
+            bg-opacity-40 p-1 shadow-sm'
+            >
+              <MdEmail className='text-xl' />
+              <span className='text-sm font-semibold '>dev.nhlam@gmail.com</span>
+            </div>
+          </div>
+
+          <div className='flex flex-row gap-2'>
+            <a href='/'>
+              <FaFacebook className='text-2xl text-slate-200' />
+            </a>
+            <a href='/'>
+              <FaGithub className='text-2xl text-slate-200' />
+            </a>
+          </div>
+        </div>
       </div>
-      {/* ------------- */}
-      <img
-        src={`/svg/code-think.svg`}
-        className='hidden md:block'
-        style={{
-          position: 'absolute',
-          bottom: '10px',
-          right: '10px',
-          filter: 'drop-shadow(5px 5px 5px #222)'
-        }}
-        width={200}
-        height={100}
-        sizes='100vw'
-        alt='code-think'
-      />
     </header>
   )
 }

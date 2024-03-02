@@ -1,23 +1,11 @@
-import {
-  ContactMeComponent,
-  HeaderComponent,
-  PositionComponent,
-  SummaryComponent,
-  TechnicalComponent,
-  WhyMakeComponent,
-  WorkMakeComponent
-} from '@/components'
+import { HeaderComponent } from '@/components'
+import { SummaryComponent } from '@/components/summary'
 
 export const RootContainer = () => {
   return (
     <main className='flex flex-col'>
       <HeaderComponent />
-      <WorkMakeComponent />
-      <PositionComponent />
       <SummaryComponent />
-      <TechnicalComponent />
-      <WhyMakeComponent />
-      <ContactMeComponent />
     </main>
   )
 }

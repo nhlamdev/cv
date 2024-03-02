@@ -9,7 +9,6 @@ import { RootContainer } from './container'
 const RootComponent = () => {
   const emotionCache = createCache({ key: 'css' })
 
-  console.log(process.env)
   return (
     <React.StrictMode>
       <CacheProvider value={emotionCache}>

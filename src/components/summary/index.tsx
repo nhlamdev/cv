@@ -1,3 +1,7 @@
 export const SummaryComponent = () => {
-  return <div></div>
+  return (
+    <section>
+      <h2>Summary</h2>
+    </section>
+  )
 }
