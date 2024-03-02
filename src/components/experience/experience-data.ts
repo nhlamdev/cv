@@ -4,8 +4,7 @@ interface IExperienceDetail {
 }
 
 interface IExperience {
-  company_name: string
-  url?: string
+  company: { name: string; url?: string }
   start: string
   end?: string
   position: string
@@ -14,8 +13,7 @@ interface IExperience {
 
 export const experiences: IExperience[] = [
   {
-    company_name: 'Oryza Systems',
-    url: 'https://oryza.vn/',
+    company: { name: 'Oryza Systems', url: 'https://oryza.vn/' },
     start: '18/4/2022',
     position: 'Software Engineer',
     details: [

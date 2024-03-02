@@ -17,7 +17,21 @@ export const ExperienceComponent = () => {
 
                   <div className='flex flex-col'>
                     <div className='flex flex-row items-center'>
-                      <span className='text-md font-semibold'>{ex.company_name}</span>|
+                      {ex.company.url ? (
+                        <a
+                          href={ex.company.url}
+                          className='text-md font-semibold 
+                        hover:text-slate-600'
+                          style={{
+                            transition: 'all ease .3s'
+                          }}
+                        >
+                          {ex.company.name}
+                        </a>
+                      ) : (
+                        <span className='text-md font-semibold'>{ex.company.name}</span>
+                      )}
+                      |
                       <span className='text-sm'>
                         {ex.start} - {ex.end ? ex.end : 'Current'}
                       </span>

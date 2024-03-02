@@ -1,4 +1,10 @@
-import { HeaderComponent, TechnicalSkillsComponent, ExperienceComponent } from '@/components'
+import {
+  HeaderComponent,
+  TechnicalSkillsComponent,
+  ExperienceComponent,
+  WorkMakeComponent,
+  EducationComponent
+} from '@/components'
 import { SummaryComponent } from '@/components/summary'
 
 export const RootContainer = () => {
@@ -7,7 +13,9 @@ export const RootContainer = () => {
       <HeaderComponent />
       <SummaryComponent />
       <TechnicalSkillsComponent />
+      <EducationComponent />
       <ExperienceComponent />
+      <WorkMakeComponent />
     </main>
   )
 }
