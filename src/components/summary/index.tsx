@@ -1,6 +1,6 @@
 export const SummaryComponent = () => {
   return (
-    <section className='flex flex-col p-8 gap-4 bg-summary-gradient'>
+    <section className='flex flex-col p-8 gap-4 bg-summary-gradient' id='summary'>
       <h2 className='text-2xl text-center font-bold uppercase text-slate-900'>Summary</h2>
 
       <div className='flex flex-col gap-8'>

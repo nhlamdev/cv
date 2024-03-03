@@ -5,7 +5,7 @@ import { MdWork } from 'react-icons/md'
 
 export const ExperienceComponent = () => {
   return (
-    <section className='flex flex-col p-8 gap-4'>
+    <section className='flex flex-col p-8 gap-4' id='experience'>
       <h2 className='text-2xl text-center font-bold uppercase'>professional experience</h2>
       <div className='flex flex-col gap-10'>
         {Children.toArray(

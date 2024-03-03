@@ -5,6 +5,7 @@ import createCache from '@emotion/cache'
 import { CacheProvider } from '@emotion/react'
 import { SnackbarProvider } from 'notistack'
 import { RootContainer } from './container'
+import '@/language'
 
 const RootComponent = () => {
   const emotionCache = createCache({ key: 'css' })

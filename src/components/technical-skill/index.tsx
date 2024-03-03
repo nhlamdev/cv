@@ -5,7 +5,7 @@ import { Children } from 'react'
 
 export const TechnicalSkillsComponent = () => {
   return (
-    <section className='flex flex-col p-8 gap-4'>
+    <section className='flex flex-col p-8 gap-4' id='technical'>
       <h2 className='text-2xl text-center font-bold uppercase'>technical skill</h2>
 
       <div className='flex flex-col gap-6 p-8 bg-slate-200 rounded-md shadow-md'>
