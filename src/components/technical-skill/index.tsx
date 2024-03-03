@@ -5,10 +5,10 @@ import { Children } from 'react'
 
 export const TechnicalSkillsComponent = () => {
   return (
-    <section className='flex flex-col p-8 gap-4' id='technical'>
+    <section className='flex flex-col p-8 gap-4 dark:bg-slate-900 bg-slate-100' id='technical'>
       <h2 className='text-2xl text-center font-bold uppercase'>technical skill</h2>
 
-      <div className='flex flex-col gap-6 p-8 bg-slate-200 rounded-md shadow-md'>
+      <div className='flex flex-col gap-6 p-8 bg-slate-200 bg-opacity-40 rounded-md shadow-md'>
         {Children.toArray(
           skillData.map((group) => {
             return (
@@ -16,7 +16,7 @@ export const TechnicalSkillsComponent = () => {
                 <div className='flex flex-row gap-2 items-center'>
                   <BsXDiamondFill />
 
-                  <h3 className='font-semibold text-md capitalize'>{group.title}</h3>
+                  <h3 className='font-semibold text-sm uppercase'>{group.title}</h3>
                 </div>
 
                 <div className='flex flex-row gap-2 pl-2 flex-wrap'>
@@ -31,7 +31,7 @@ export const TechnicalSkillsComponent = () => {
                           <skill.icon.default />
 
                           <span
-                            className='text-sm font-semibold lowercase select-none'
+                            className='text-sm font-semibold capitalize select-none '
                             style={{ color: skill.textColor }}
                           >
                             {skill.text}

@@ -1,8 +1,21 @@
 import { IconType } from 'react-icons'
 import { BiLogoPostgresql, BiLogoSass } from 'react-icons/bi'
-import { FaGulp, FaPython } from 'react-icons/fa'
+import { BsGitlab } from 'react-icons/bs'
+import { DiRedis } from 'react-icons/di'
+import { FaDocker, FaGulp, FaPython } from 'react-icons/fa'
+import { HiQueueList } from 'react-icons/hi2'
 import { IoLogoReact } from 'react-icons/io5'
-import { SiMicrosoftsqlserver, SiMui, SiNestjs, SiTailwindcss, SiTypescript, SiVite, SiWebpack } from 'react-icons/si'
+import {
+  SiMicrosoftsqlserver,
+  SiMinio,
+  SiMui,
+  SiNestjs,
+  SiNginx,
+  SiTailwindcss,
+  SiTypescript,
+  SiVite,
+  SiWebpack
+} from 'react-icons/si'
 import { TbBrandNextjs, TbBrandReactNative } from 'react-icons/tb'
 
 interface ITechnicalSkills {
@@ -58,12 +71,17 @@ export const skillData: ITechnicalSkillsGroup[] = [
   {
     title: 'another',
     skills: [
-      { text: 'Ci/cd with gitlab', bgColor: '#0070f3', textColor: '#000000', icon: { default: SiWebpack } },
-      { text: 'docker', bgColor: '#0070f3', textColor: '#000000', icon: { default: SiVite } },
-      { text: 'Nginx', bgColor: '#0070f3', textColor: '#000000', icon: { default: FaGulp } },
-      { text: 'Redis', bgColor: '#0070f3', textColor: '#000000', icon: { default: SiWebpack } },
-      { text: 'queue', bgColor: '#0070f3', textColor: '#000000', icon: { default: SiVite } },
-      { text: 'Minio', bgColor: '#0070f3', textColor: '#000000', icon: { default: SiWebpack } }
+      { text: 'Ci/cd with gitlab', bgColor: '#0070f3', textColor: '#000000', icon: { default: BsGitlab } },
+      { text: 'docker', bgColor: '#0070f3', textColor: '#000000', icon: { default: FaDocker } },
+      { text: 'Nginx', bgColor: '#0070f3', textColor: '#000000', icon: { default: SiNginx } },
+      { text: 'Redis', bgColor: '#0070f3', textColor: '#000000', icon: { default: DiRedis } },
+      {
+        text: 'message queue(rabbitmq, bullmq)',
+        bgColor: '#0070f3',
+        textColor: '#000000',
+        icon: { default: HiQueueList }
+      },
+      { text: 'Minio', bgColor: '#0070f3', textColor: '#000000', icon: { default: SiMinio } }
     ]
   }
 ]

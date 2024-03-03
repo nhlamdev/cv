@@ -1,7 +1,11 @@
 import { navigation_data } from './navigation.data'
 import { Children } from 'react'
 import { LanguageButton, ThemeToggleButton } from '@/components/custom'
+import { useTranslation } from 'react-i18next'
+
 export const NavigationComponent = () => {
+  const { t } = useTranslation()
+
   return (
     <nav
       className='flex absolute flex-row py-2 px-4 bg-slate-400 shadow-md
@@ -17,8 +21,8 @@ export const NavigationComponent = () => {
         {Children.toArray(
           navigation_data.map((item) => {
             return (
-              <a href={item.url} className='capitalize'>
-                {item.text}
+              <a href={item.url} className='uppercase text-sm font-semibold'>
+                {t(item.text.toUpperCase())}
               </a>
             )
           })

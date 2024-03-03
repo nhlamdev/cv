@@ -1,12 +1,4 @@
-export const resources = {
-  en: {
-    translation: {
-      test: 'test'
-    }
-  },
-  vi: {
-    translation: {
-      test: 'Kiểm thử'
-    }
-  }
-}
+import { en } from './en'
+import { vi } from './vi'
+
+export const resources = { en, vi }

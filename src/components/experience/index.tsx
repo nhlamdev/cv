@@ -1,12 +1,14 @@
 import { experiences } from './experience-data'
 import { Children } from 'react'
+import { useTranslation } from 'react-i18next'
 import { BsXDiamondFill } from 'react-icons/bs'
 import { MdWork } from 'react-icons/md'
 
 export const ExperienceComponent = () => {
+  const { t } = useTranslation()
   return (
     <section className='flex flex-col p-8 gap-4' id='experience'>
-      <h2 className='text-2xl text-center font-bold uppercase'>professional experience</h2>
+      <h2 className='text-2xl text-center font-bold uppercase'>{t('EXPERIENCE')}</h2>
       <div className='flex flex-col gap-10'>
         {Children.toArray(
           experiences.map((ex) => {

@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next'
 import { FaUniversity } from 'react-icons/fa'
 
 export const EducationComponent = () => {
+  const { t } = useTranslation()
   return (
     <section className='flex flex-col p-8 gap-4' id='education'>
-      <h2 className='text-2xl text-center font-bold uppercase'>Education</h2>
+      <h2 className='text-2xl text-center font-bold uppercase'>{t('EDUCATION')}</h2>
 
       <div>
         <a

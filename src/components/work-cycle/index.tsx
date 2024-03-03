@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 interface IWorkMakeItem {
   url: string
   title: string
@@ -10,6 +12,7 @@ const mocks: IWorkMakeItem[] = [
 ]
 
 export const WorkMakeComponent = () => {
+  const { t } = useTranslation()
   return (
     <section className='flex flex-col gap-4 px-2 py-4 w-full'>
       <div
@@ -17,7 +20,7 @@ export const WorkMakeComponent = () => {
         gap-4 scroll-m-2 '
       >
         <div className='h-[2px] w-20 bg-slate-900' />
-        <h2 className='text-center font-semibold text-2xl uppercase'>Work cycle</h2>
+        <h2 className='text-center font-semibold text-2xl uppercase'>{t('WORK_CYCLE')}</h2>
         <div className='h-[2px] w-20 bg-slate-900' />
       </div>
 

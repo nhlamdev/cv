@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next'
 import { FaFacebook, FaGithub, FaPhoneAlt } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 
 export const CardInfoComponent = () => {
+  const { t } = useTranslation()
   return (
     <div
       className='flex flex-row gap-10 py-10 px-20 rounded-md bg-slate-200 bg-opacity-20 
@@ -17,7 +19,7 @@ export const CardInfoComponent = () => {
       <div className='flex flex-col justify-around'>
         <div className='flex flex-col gap-1'>
           <span className='text-2xl bold text-slate-100'>Nguyễn Hoàng Lâm</span>
-          <span className='text-sm italic text-slate-100'>25 year old</span>
+          <span className='text-sm italic text-slate-100'>25 {t('YEAR_OLD')}</span>
         </div>
 
         <div className='flex flex-col gap-1'>
