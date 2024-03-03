@@ -2,11 +2,13 @@ import { BsXDiamondFill } from 'react-icons/bs'
 import { skillData } from './technical-data'
 
 import { Children } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export const TechnicalSkillsComponent = () => {
+  const { t } = useTranslation()
   return (
     <section className='flex flex-col p-8 gap-4 dark:bg-slate-900 bg-slate-100' id='technical'>
-      <h2 className='text-2xl text-center font-bold uppercase'>technical skill</h2>
+      <h2 className='text-2xl text-center font-bold uppercase'>{t('TECHNICAL')}</h2>
 
       <div className='flex flex-col gap-6 p-8 bg-slate-200 bg-opacity-40 rounded-md shadow-md'>
         {Children.toArray(

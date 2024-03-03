@@ -42,7 +42,7 @@ export const skillData: ITechnicalSkillsGroup[] = [
     ]
   },
   {
-    title: 'framework',
+    title: 'framework & library',
     skills: [
       { text: 'reactjs', bgColor: '#61DAFB', textColor: '#fff', icon: { default: IoLogoReact } },
       { text: 'nextjs', bgColor: '#F0F8FF', textColor: '#000000', icon: { default: TbBrandNextjs } },
