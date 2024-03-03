@@ -8,27 +8,13 @@ export const SummaryComponent = () => {
 
       <div className='flex flex-col gap-8'>
         <ol className='flex flex-col gap-4 mx-20'>
-          <li className='text-slate-900'>
-            👋 Hello there! I&rsquo;m Nguyen Hoang Lam, a passionate programmer on a journey of constant growth and
-            exploration in the ever-evolving realm of technology.
-          </li>
-          <li className='text-slate-900'>
-            🚀 With a fervent desire to expand my horizons, I immerse myself in learning about the latest and most
-            exciting advancements in the tech world.
-          </li>
-          <li className='text-slate-900'>
-            💡 Always seeking new challenges, I thrive in engaging debates and discussions, embracing different
-            perspectives with an open mind.
-          </li>
-          <li className='text-slate-900'>
-            💻 As a developer, I am committed to honing my skills, pushing boundaries, and contributing to innovative
-            projects that make a difference.
-          </li>
+          <li className='text-slate-900'>👋 {t('SUMMARY_1')}</li>
+          <li className='text-slate-900'>🚀 {t('SUMMARY_2')}</li>
+          <li className='text-slate-900'>💡 {t('SUMMARY_3')}</li>
+          <li className='text-slate-900'>💻 {t('SUMMARY_4')}</li>
         </ol>
 
-        <span className='text-right text-sm text-slate-900 font-semibold'>
-          Let&rsquo;s connect and embark on this exciting journey together!
-        </span>
+        <span className='text-right text-sm text-slate-900 font-semibold'>{t('SUMMARY_5')}</span>
       </div>
     </section>
   )

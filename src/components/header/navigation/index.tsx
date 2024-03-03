@@ -8,8 +8,8 @@ export const NavigationComponent = () => {
 
   return (
     <nav
-      className='flex absolute flex-row py-2 px-4 bg-slate-400 shadow-md
-        top-0 left-0 right-0 z-40 bg-opacity-40 items-center hover:shadow-xl'
+      className='flex fixed flex-row py-2 px-4 bg-slate-400 shadow-md
+        top-0 left-0 right-0 z-40 items-center hover:shadow-xl'
     >
       <div className='flex flex-row items-center flex-1 gap-2'>
         <span className='text-md font-semibold'>Nguyễn Hoàng Lâm</span>
