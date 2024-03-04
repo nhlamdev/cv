@@ -19,7 +19,7 @@ export const SummaryComponent = () => {
       </div>
 
       <div className='flex flex-col gap-8'>
-        <ol className='flex flex-col gap-4 mx-20'>
+        <ol className='flex flex-col gap-4 mx-20 sm:mx-2'>
           <li className='text-slate-900 dark:text-slate-100'>👋 {t('SUMMARY_1')}</li>
           <li className='text-slate-900 dark:text-slate-100'>🚀 {t('SUMMARY_2')}</li>
           <li className='text-slate-900 dark:text-slate-100'>💡 {t('SUMMARY_3')}</li>
