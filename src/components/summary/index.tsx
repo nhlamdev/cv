@@ -4,7 +4,19 @@ export const SummaryComponent = () => {
   const { t } = useTranslation()
   return (
     <section className='flex flex-col p-8 gap-4 bg-summary-gradient' id='summary'>
-      <h2 className='text-2xl text-center font-bold uppercase text-slate-900'>{t('SUMMARY')}</h2>
+      <div
+        className='w-full flex flex-row justify-center items-center
+        gap-4 scroll-m-2'
+      >
+        <div className='h-[2px] w-20 bg-slate-900 dark:bg-slate-100' />
+        <h2
+          className='text-center font-semibold text-2xl uppercase 
+        text-slate-900 dark:text-slate-100'
+        >
+          {t('SUMMARY')}
+        </h2>
+        <div className='h-[2px] w-20 bg-slate-900 dark:bg-slate-100' />
+      </div>
 
       <div className='flex flex-col gap-8'>
         <ol className='flex flex-col gap-4 mx-20'>
