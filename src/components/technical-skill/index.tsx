@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 export const TechnicalSkillsComponent = () => {
   const { t } = useTranslation()
   return (
-    <section className='flex flex-col p-8 gap-4 dark:bg-slate-900 bg-slate-100' id='technical'>
+    <section className='flex flex-col p-8 gap-4' id='technical'>
       <div
         className='w-full flex flex-row justify-center items-center
         gap-4 scroll-m-2'
@@ -22,7 +22,10 @@ export const TechnicalSkillsComponent = () => {
         <div className='h-[2px] w-20 bg-slate-900 dark:bg-slate-100' />
       </div>
 
-      <div className='flex flex-col gap-6 p-8 bg-slate-200 bg-opacity-40 rounded-md shadow-md'>
+      <div
+        className='flex flex-col gap-6 p-8 bg-slate-800 dark:bg-slate-400
+      bg-opacity-20 rounded-md shadow-2xl'
+      >
         {Children.toArray(
           skillData.map((group) => {
             return (

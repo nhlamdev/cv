@@ -27,14 +27,14 @@ export const ExperienceComponent = () => {
             return (
               <div className='flex flex-col gap-4'>
                 <div className='flex flex-row gap-2 items-center'>
-                  <BsXDiamondFill />
+                  <BsXDiamondFill className='text-state-900 dark:text-slate-100' />
 
-                  <div className='flex flex-col'>
+                  <div className='flex flex-col  text-state-900 dark:text-slate-100'>
                     <div className='flex flex-row items-center'>
                       {ex.company.url ? (
                         <a
                           href={ex.company.url}
-                          className='text-md font-semibold 
+                          className='text-md font-semibold  text-state-900 dark:text-slate-100
                         hover:text-slate-600'
                           style={{
                             transition: 'all ease .3s'
@@ -43,15 +43,19 @@ export const ExperienceComponent = () => {
                           {ex.company.name}
                         </a>
                       ) : (
-                        <span className='text-md font-semibold'>{ex.company.name}</span>
+                        <span className='text-md font-semibold  text-state-900 dark:text-slate-100 '>
+                          {ex.company.name}
+                        </span>
                       )}
                       |
-                      <span className='text-sm'>
+                      <span className='text-  text-state-900 dark:text-slate-100'>
                         {ex.start} - {ex.end ? ex.end : 'Current'}
                       </span>
                     </div>
 
-                    <span className='text-xs italic font-normal'>{ex.position}</span>
+                    <span className='text-xs italic font-normal  text-state-900 dark:text-slate-100'>
+                      {ex.position}
+                    </span>
                   </div>
                 </div>
 
@@ -62,12 +66,17 @@ export const ExperienceComponent = () => {
                       return (
                         <div className='flex flex-row gap-2 items-center ml-4'>
                           <div>
-                            <MdWork className='text-md' />
+                            <MdWork className='text-md  text-state-900 dark:text-slate-100' />
                           </div>
 
                           <div>
-                            <span className='capitalize text-sm font-semibold'>{detail.title}</span>:{' '}
-                            <span className='lowercase text-sm '>{detail.description}</span>
+                            <span className='capitalize text-sm font-semibold text-state-900 dark:text-slate-100'>
+                              {detail.title}
+                            </span>
+                            :{' '}
+                            <span className='lowercase text-sm text-state-900 dark:text-slate-100'>
+                              {detail.description}
+                            </span>
                           </div>
                         </div>
                       )

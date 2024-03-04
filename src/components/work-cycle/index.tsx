@@ -19,9 +19,11 @@ export const WorkMakeComponent = () => {
         className='w-full flex flex-row justify-center items-center
         gap-4 scroll-m-2 '
       >
-        <div className='h-[2px] w-20 bg-slate-900' />
-        <h2 className='text-center font-semibold text-2xl uppercase'>{t('WORK_CYCLE')}</h2>
-        <div className='h-[2px] w-20 bg-slate-900' />
+        <div className='h-[2px] w-20 text-state-900 dark:text-slate-100' />
+        <h2 className='text-center font-semibold text-2xl uppercase text-state-900 dark:text-slate-100'>
+          {t('WORK_CYCLE')}
+        </h2>
+        <div className='h-[2px] w-20 text-state-900 dark:text-slate-100' />
       </div>
 
       <div className='flex flex-col gap-2 lg:flex-row justify-around w-full'>

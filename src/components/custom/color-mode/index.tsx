@@ -20,7 +20,8 @@ export const ThemeToggleButton = () => {
 
   return (
     <button
-      className='bg-slate-800 rounded-full shadow-xl p-2'
+      className='bg-slate-900 dark:bg-slate-400 rounded-full shadow-xl p-2
+      bg-opacity-40'
       onClick={() => {
         if (!document) {
           return

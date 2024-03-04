@@ -9,7 +9,7 @@ import { SummaryComponent } from '@/components/summary'
 
 export const RootContainer = () => {
   return (
-    <main className='flex flex-col'>
+    <main className='flex flex-col bg-light-gradient dark:bg-dark-gradient'>
       <HeaderComponent />
       <SummaryComponent />
       <TechnicalSkillsComponent />
