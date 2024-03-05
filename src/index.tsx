@@ -1,10 +1,10 @@
 import '@/styles/global.scss'
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import ReactDOM from 'react-dom/client'
 import createCache from '@emotion/cache'
 import { CacheProvider } from '@emotion/react'
-import { SnackbarProvider } from 'notistack'
-import { RootContainer } from './container'
+
+const RootContainer = lazy(() => import('@/container').then((mod) => ({ default: mod.RootContainer })))
 import '@/language'
 
 const RootComponent = () => {
@@ -13,9 +13,9 @@ const RootComponent = () => {
   return (
     <React.StrictMode>
       <CacheProvider value={emotionCache}>
-        <SnackbarProvider>
+        <Suspense fallback={<div>Loading...</div>}>
           <RootContainer />
-        </SnackbarProvider>
+        </Suspense>
       </CacheProvider>
     </React.StrictMode>
   )
