@@ -7,7 +7,7 @@ export const LanguageButton = () => {
 
   return (
     <button
-      className='px-4 py-1 shadow-xl w-12 dark:bg-slate-400 bg-slate-600
+      className='px-4 py-1 shadow-xl   dark:bg-slate-400 bg-slate-600
         flex justify-center items-center rounded-sm bg-opacity-40'
       onClick={() => {
         if (i18n.language === 'en') {
@@ -17,7 +17,7 @@ export const LanguageButton = () => {
         }
       }}
     >
-      <span className='text-xs font-semibold text-center uppercase'>{i18next.language}</span>
+      <span className='text-xs font-semibold text-center uppercase '>{i18next.language}</span>
     </button>
   )
 }

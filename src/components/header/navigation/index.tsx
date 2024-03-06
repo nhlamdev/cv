@@ -20,7 +20,7 @@ export const NavigationComponent = () => {
           <span className='text-sm font-semibold text-state-900 dark:text-slate-100'>Nguyễn Hoàng Lâm</span>
         </div>
 
-        <div className='sm:flex hidden flex-row gap-2 '>
+        <div className='sm:flex hidden flex-row gap-2 items-center'>
           <ThemeToggleButton />
           <LanguageButton />
         </div>
@@ -79,7 +79,7 @@ export const NavigationComponent = () => {
                 })
               )}
             </div>
-            <div className='flex sm:hidden flex-row gap-2 justify-between px-2'>
+            <div className='flex sm:hidden flex-row gap-2 justify-between items-center px-2'>
               <ThemeToggleButton />
               <LanguageButton />
             </div>

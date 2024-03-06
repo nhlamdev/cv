@@ -54,8 +54,9 @@ export const WorkMakeComponent = () => {
               '
                 style={{ transition: 'all ease .5s' }}
               />
+
               <img
-                className='shadow-xl p-2 rounded-md border-2 border-solid border-slate-600'
+                className='shadow-xl w-40 sm:w-auto p-2 rounded-md border-2 border-solid border-slate-600'
                 src={v.url}
                 alt={v.url}
               />
@@ -63,15 +64,15 @@ export const WorkMakeComponent = () => {
               <span
                 className='font-semibold absolute select-none text-slate-200 translate-y-4
                 group-hover:translate-y-0 group-hover:opacity-100 group-hover:visible
-                opacity-0 invisible rounded-md px-4 py-1 text-md hidden lg:inline'
+                opacity-0 invisible rounded-md px-4 py-1 text-md hidden lg:inline uppercase'
                 style={{ transition: 'all ease .5s', border: '1px solid white' }}
               >
                 {v.title}
               </span>
               <span
-                className='m-4 text-2xl text-slate-900 dark:text-slate-100 
+                className='m-4 text-lg sm:text-xl md:text-2xl text-slate-900 dark:text-slate-100 
                   lg:hidden inline bg-slate-200 dark:bg-slate-800 px-8 py-2
-                  rounded-md'
+                  rounded-md w-full sm:w-fit text-center uppercase'
               >
                 {v.title}
               </span>

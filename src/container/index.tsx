@@ -23,7 +23,9 @@ export const RootContainer = () => {
         className='flex flex-col items-center p-4 gap-4 bg-slate-200 dark:bg-slate-800 shadow-2xl'
         style={{ borderTop: '1px solid black' }}
       >
-        <span className='text-md font-semibold uppercase text-slate-900 dark:text-slate-200'>developed by</span>
+        <span className='text-sm font-semibold uppercase text-slate-900 dark:text-slate-200'>
+          Code your way to the future with passion and perseverance !
+        </span>
         <div className='flex flex-row gap-4 justify-center items-center'>
           {Children.toArray(
             footer_data.map((v) => {
