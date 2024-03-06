@@ -45,7 +45,7 @@ export const TechnicalSkillsComponent = () => {
                           rounded-md shadow-md`}
                           style={{ backgroundColor: skill.bgColor }}
                         >
-                          <skill.icon.default />
+                          <skill.icon.default style={{ color: skill.textColor }} />
 
                           <span
                             className='text-sm font-semibold capitalize select-none '

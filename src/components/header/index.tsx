@@ -11,7 +11,7 @@ export const HeaderComponent = () => {
       }}
     >
       <NavigationComponent />
-      <div className='absolute bottom-2 right-2'>
+      <div className='absolute bottom-2 right-2  hidden  md:block'>
         <img src='/svg/code-think.svg' alt='code think' />
       </div>
       <CardInfoComponent />

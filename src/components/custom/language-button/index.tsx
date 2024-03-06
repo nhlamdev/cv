@@ -8,7 +8,7 @@ export const LanguageButton = () => {
   return (
     <button
       className='px-4 py-1 shadow-xl w-12 dark:bg-slate-400 bg-slate-600
-      flex justify-center items-center rounded-sm bg-opacity-40'
+        flex justify-center items-center rounded-sm bg-opacity-40'
       onClick={() => {
         if (i18n.language === 'en') {
           i18n.changeLanguage('vi')

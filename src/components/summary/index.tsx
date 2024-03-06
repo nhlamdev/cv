@@ -19,18 +19,17 @@ export const SummaryComponent = () => {
       </div>
 
       <div className='flex flex-col gap-8'>
-        <ol className='flex flex-col gap-4 mx-20 sm:mx-2'>
-          <li className='text-slate-900 dark:text-slate-100'>👋 {t('SUMMARY_1')}</li>
-          <li className='text-slate-900 dark:text-slate-100'>🚀 {t('SUMMARY_2')}</li>
-          <li className='text-slate-900 dark:text-slate-100'>💡 {t('SUMMARY_3')}</li>
-          <li className='text-slate-900 dark:text-slate-100'>💻 {t('SUMMARY_4')}</li>
+        <ol className='flex flex-col gap-4 sm:mx-6 lg:mx-20 mx-2'>
+          <li className='text-slate-900 dark:text-slate-100'>{t('SUMMARY_1')}</li>
+          <li className='text-slate-900 dark:text-slate-100'>{t('SUMMARY_2')}</li>
+          <li className='text-slate-900 dark:text-slate-100'>{t('SUMMARY_3')}</li>
         </ol>
 
         <span
           className='text-right text-sm text-slate-900 dark:text-slate-100
          font-semibold'
         >
-          {t('SUMMARY_5')}
+          {t('SUMMARY_4')}
         </span>
       </div>
     </section>

@@ -6,14 +6,12 @@ export const en = {
     EXPERIENCE: 'experience',
     YEAR_OLD: 'year old',
     WORK_CYCLE: 'WORK CYCLE',
-    SUMMARY_1: `I'm Nguyen Hoang Lam, a passionate programmer on a journey of constant 
-                growth and exploration in the ever-evolving realm of technology.`,
+    SUMMARY_1:
+      '👋 My name is Nguyen Hoang Lam, a passionate programmer, continuously on a journey of growth and exploration in a world of ever-changing and improving technology.',
     SUMMARY_2:
-      'With a fervent desire to expand my horizons, I immerse myself in learning about the latest and most exciting advancements in the tech world.',
+      '💡 Always seeking new challenges and personal development through debates, I welcome diverse perspectives with freshness.',
     SUMMARY_3:
-      'Always seeking new challenges, I thrive in engaging debates and discussions, embracing different perspectives with an open mind.',
-    SUMMARY_4:
-      'As a developer, I am committed to honing my skills, pushing boundaries, and contributing to innovative projects that make a difference.',
-    SUMMARY_5: 'Let’s connect and embark on this exciting journey together!'
+      '💻 As a programmer, I aspire to improve my skills, overcome limitations, and contribute to creative projects that bring meaningful change.',
+    SUMMARY_4: 'Let’s connect and embark on this exciting journey together!'
   }
 }

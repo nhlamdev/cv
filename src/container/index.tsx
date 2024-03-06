@@ -6,6 +6,8 @@ import {
   EducationComponent
 } from '@/components'
 import { SummaryComponent } from '@/components/summary'
+import { footer_data } from '@/constant/footer'
+import { Children } from 'react'
 
 export const RootContainer = () => {
   return (
@@ -16,6 +18,26 @@ export const RootContainer = () => {
       <EducationComponent />
       <ExperienceComponent />
       <WorkMakeComponent />
+      <footer
+        className='flex flex-col items-center p-4 gap-4 bg-slate-200 dark:bg-slate-800 shadow-2xl'
+        style={{ borderTop: '1px solid black' }}
+      >
+        <span className='text-md font-semibold uppercase text-slate-900 dark:text-slate-200'>developed by</span>
+        <div className='flex flex-row gap-4 justify-center items-center'>
+          {Children.toArray(
+            footer_data.map((v) => {
+              return (
+                <div
+                  className='p-4 rounded-full shadow-xl aspect-square bg-slate-800
+                    flex items-center justify-center size-20'
+                >
+                  <img src={v.url} className='w-full' alt={v.alt} />
+                </div>
+              )
+            })
+          )}
+        </div>
+      </footer>
     </main>
   )
 }

@@ -31,9 +31,9 @@ export const WorkMakeComponent = () => {
           return (
             <div
               key={`work-cycle-${k}`}
-              className='flex flex-row lg:flex-col items-start
+              className='flex flex-row lg:flex-col
               relative justify-start lg:justify-center gap-2
-              group w-full lg:w-auto lg:items-center '
+              group w-full lg:w-auto items-center'
             >
               <div
                 className='hidden lg:block absolute bg-slate-900 bg-opacity-0 invisible 
@@ -51,7 +51,6 @@ export const WorkMakeComponent = () => {
               '
                 style={{ transition: 'all ease .5s' }}
               />
-
               <img
                 className='shadow-xl p-2 rounded-md border-2 border-solid border-slate-600'
                 src={v.url}
@@ -60,14 +59,19 @@ export const WorkMakeComponent = () => {
 
               <span
                 className='font-semibold absolute select-none text-slate-200 translate-y-4
-              group-hover:translate-y-0 group-hover:opacity-100 group-hover:visible
-              opacity-0 invisible rounded-md px-4 py-1 text-md hidden lg:inline'
+                group-hover:translate-y-0 group-hover:opacity-100 group-hover:visible
+                opacity-0 invisible rounded-md px-4 py-1 text-md hidden lg:inline'
                 style={{ transition: 'all ease .5s', border: '1px solid white' }}
               >
                 {v.title}
               </span>
-
-              <span className='m-4 text-2xl text-slate-900 lg:hidden inline'>{v.title}</span>
+              <span
+                className='m-4 text-2xl text-slate-900 dark:text-slate-100 
+                  lg:hidden inline bg-slate-200 dark:bg-slate-800 px-8 py-2
+                  rounded-md'
+              >
+                {v.title}
+              </span>
             </div>
           )
         })}

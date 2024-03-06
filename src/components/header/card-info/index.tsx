@@ -6,7 +6,7 @@ export const CardInfoComponent = () => {
   const { t } = useTranslation()
   return (
     <div
-      className='flex flex-row gap-10 py-10 px-20 rounded-md bg-slate-200 bg-opacity-20 
+      className='flex flex-col md:flex-row gap-10 py-10 px-20 rounded-md bg-slate-200 bg-opacity-20 
             backdrop-filter backdrop-blur-lg'
     >
       <img
@@ -16,9 +16,9 @@ export const CardInfoComponent = () => {
         style={{ border: '4px solid black' }}
       />
 
-      <div className='flex flex-col justify-around'>
+      <div className='flex flex-col justify-around gap-2'>
         <div className='flex flex-col gap-1'>
-          <span className='text-2xl bold text-slate-100'>Nguyễn Hoàng Lâm</span>
+          <span className='text-2xl bold text-slate-100 sm:text-md'>Nguyễn Hoàng Lâm</span>
           <span className='text-sm italic text-slate-100'>25 {t('YEAR_OLD')}</span>
         </div>
 
@@ -40,10 +40,10 @@ export const CardInfoComponent = () => {
         </div>
 
         <div className='flex flex-row gap-2'>
-          <a href='/'>
+          <a href='https://www.facebook.com/'>
             <FaFacebook className='text-2xl text-slate-200' />
           </a>
-          <a href='/'>
+          <a href='https://github.com/nhlamdev'>
             <FaGithub className='text-2xl text-slate-200' />
           </a>
         </div>
