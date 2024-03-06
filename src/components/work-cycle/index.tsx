@@ -20,7 +20,10 @@ export const WorkMakeComponent = () => {
         gap-4 scroll-m-2 '
       >
         <div className='h-[2px] w-20 text-state-900 dark:text-slate-100' />
-        <h2 className='text-center font-semibold text-2xl uppercase text-state-900 dark:text-slate-100'>
+        <h2
+          className='text-center font-semibold text-lg sm:text-xl md:text-2xl uppercase 
+        text-state-900 dark:text-slate-100'
+        >
           {t('WORK_CYCLE')}
         </h2>
         <div className='h-[2px] w-20 text-state-900 dark:text-slate-100' />

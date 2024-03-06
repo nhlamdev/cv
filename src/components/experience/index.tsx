@@ -7,14 +7,14 @@ import { MdWork } from 'react-icons/md'
 export const ExperienceComponent = () => {
   const { t } = useTranslation()
   return (
-    <section className='flex flex-col p-8 gap-4' id='experience'>
+    <section className='flex flex-col p-2 sm:p-8 gap-4' id='experience'>
       <div
         className='w-full flex flex-row justify-center items-center
         gap-4 scroll-m-2'
       >
         <div className='h-[2px] w-20 bg-slate-900 dark:bg-slate-100' />
         <h2
-          className='text-center font-semibold text-2xl uppercase 
+          className='text-center font-semibold text-lg sm:text-xl md:text-2xl uppercase 
         text-slate-900 dark:text-slate-100'
         >
           {t('EXPERIENCE')}

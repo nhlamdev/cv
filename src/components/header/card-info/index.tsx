@@ -7,22 +7,22 @@ export const CardInfoComponent = () => {
   return (
     <div
       className='flex flex-col md:flex-row gap-10 py-10 px-20 rounded-md bg-slate-200 bg-opacity-20 
-            backdrop-filter backdrop-blur-lg'
+            backdrop-filter backdrop-blur-lg items-center'
     >
       <img
         src='/image/avatar.jpg'
         alt='avatar'
-        className='rounded-full size-60 shadow-md'
+        className='rounded-full size-44 sm:size-60 shadow-md'
         style={{ border: '4px solid black' }}
       />
 
       <div className='flex flex-col justify-around gap-2'>
-        <div className='flex flex-col gap-1'>
-          <span className='text-2xl bold text-slate-100 sm:text-md'>Nguyễn Hoàng Lâm</span>
+        <div className='flex flex-col gap-1 items-center md:items-start'>
+          <span className='text-md bold text-slate-100 sm:text-2xl'>Nguyễn Hoàng Lâm</span>
           <span className='text-sm italic text-slate-100'>25 {t('YEAR_OLD')}</span>
         </div>
 
-        <div className='flex flex-col gap-1'>
+        <div className='flex flex-col gap-1 '>
           <div
             className='flex flex-row items-center gap-2 bg-slate-200 rounded-md 
                 bg-opacity-40 p-1 shadow-sm'
@@ -39,7 +39,7 @@ export const CardInfoComponent = () => {
           </div>
         </div>
 
-        <div className='flex flex-row gap-2'>
+        <div className='flex flex-row gap-2 justify-center sm:justify-start'>
           <a href='https://www.facebook.com/'>
             <FaFacebook className='text-2xl text-slate-200' />
           </a>

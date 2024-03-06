@@ -4,14 +4,14 @@ import { FaUniversity } from 'react-icons/fa'
 export const EducationComponent = () => {
   const { t } = useTranslation()
   return (
-    <section className='flex flex-col p-8 gap-4 ' id='education'>
+    <section className='flex flex-col p-2 sm:p-8 gap-4 ' id='education'>
       <div
         className='w-full flex flex-row justify-center items-center
         gap-4 scroll-m-2'
       >
         <div className='h-[2px] w-20 bg-slate-900 dark:bg-slate-100' />
         <h2
-          className='text-center font-semibold text-2xl uppercase 
+          className='text-center font-semibold text-lg sm:text-xl md:text-2xl uppercase 
         text-slate-900 dark:text-slate-100'
         >
           {t('EDUCATION')}
@@ -23,7 +23,7 @@ export const EducationComponent = () => {
         <a
           href='https://tdmu.edu.vn/'
           className='flex flex-row gap-4 items-center py-4 px-8 rounded-md shadow-md 
-          bg-cyan-600  w-fit relative'
+          bg-cyan-600 w-full sm:w-fit relative'
         >
           <div>
             <FaUniversity className='text-2xl text-slate-100 dark:text-slate-900' />

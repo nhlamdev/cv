@@ -1,11 +1,12 @@
 import '@/styles/global.scss'
-import React, { Suspense, lazy } from 'react'
-import ReactDOM from 'react-dom/client'
 import createCache from '@emotion/cache'
 import { CacheProvider } from '@emotion/react'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-const RootContainer = lazy(() => import('@/container').then((mod) => ({ default: mod.RootContainer })))
+// const RootContainer = lazy(() => import('@/container').then((mod) => ({ default: mod.RootContainer })))
 import '@/language'
+import { RootContainer } from './container'
 
 const RootComponent = () => {
   const emotionCache = createCache({ key: 'css' })
@@ -13,9 +14,9 @@ const RootComponent = () => {
   return (
     <React.StrictMode>
       <CacheProvider value={emotionCache}>
-        <Suspense fallback={<div>Loading...</div>}>
-          <RootContainer />
-        </Suspense>
+        {/* <Suspense fallback={<div>Loading...</div>}> */}
+        <RootContainer />
+        {/* </Suspense> */}
       </CacheProvider>
     </React.StrictMode>
   )

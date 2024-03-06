@@ -99,13 +99,8 @@ module.exports = (env, argv) => {
           }
         }
       },
-      minSize: 20000,
       minimizer: [new TerserPlugin()],
-      minChunks: 1,
-      maxAsyncRequests: 30,
-      maxInitialRequests: 30,
       flagIncludedChunks: true,
-      enforceSizeThreshold: 50000,
       minimize: true,
       realContentHash: true,
       removeEmptyChunks: true
