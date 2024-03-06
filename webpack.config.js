@@ -8,6 +8,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
+const TerserPlugin = require('terser-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const webpack = require('webpack')
 
@@ -18,7 +19,18 @@ module.exports = (env, argv) => {
   const config = {
     entry: {
       bundle: path.resolve(__dirname, 'src/index.tsx'),
-      vendor: require('./vendor.json')
+      vendors: [
+        'react',
+        'react-dom',
+        'react-icons',
+        'react-redux',
+        'react-i18next',
+        'i18next',
+        '@emotion/react',
+        '@emotion/cache'
+      ],
+      'vendors-core': ['regenerator-runtime'],
+      'vendors-ui': ['tw-elements', 'flowbite-react', '@mui/material']
     },
     output: {
       filename: 'js/[name].[contenthash].js', // output
@@ -57,23 +69,43 @@ module.exports = (env, argv) => {
       splitChunks: {
         chunks: 'all',
         cacheGroups: {
-          vendor: {
+          vendors: {
             test: /[\\/]node_modules[\\/]/,
             name(module) {
-              // get the name. E.g. node_modules/packageName/not/this/part.js
-              // or node_modules/packageName
               const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1]
 
-              // npm package names are URL-safe, but some servers don't like @ symbols
               return `npm.${packageName.replace('@', '')}`
-            }
+            },
+            chunks: 'all',
+            reuseExistingChunk: true,
+            idHint: 'vendors'
+          },
+          'vendors-core': {
+            test: /core-js|regenerator-runtime/,
+            name: 'vendors-core',
+            chunks: 'all',
+            enforce: true
+          },
+          'vendors-ui': {
+            test: /@material|antd|react-bootstrap/, // thay thế với các thư viện UI của bạn
+            name: 'vendors-ui',
+            chunks: 'all',
+            enforce: true
+          },
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true
           }
         }
       },
-      runtimeChunk: {
-        name: 'runtime'
-      },
+      minSize: 20000,
+      minimizer: [new TerserPlugin()],
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
       flagIncludedChunks: true,
+      enforceSizeThreshold: 50000,
       minimize: true,
       realContentHash: true,
       removeEmptyChunks: true

@@ -5,6 +5,7 @@ import {
   WorkMakeComponent,
   EducationComponent
 } from '@/components'
+
 import { SummaryComponent } from '@/components/summary'
 import { footer_data } from '@/constant/footer'
 import { Children } from 'react'
@@ -12,7 +13,7 @@ import { Children } from 'react'
 export const RootContainer = () => {
   return (
     <main className='flex flex-col bg-light-gradient dark:bg-dark-gradient'>
-      <HeaderComponent />
+      <HeaderComponent />z
       <SummaryComponent />
       <TechnicalSkillsComponent />
       <EducationComponent />
