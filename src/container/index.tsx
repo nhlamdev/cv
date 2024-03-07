@@ -9,8 +9,10 @@ import {
 import { SummaryComponent } from '@/components/summary'
 import { footer_data } from '@/constant/footer'
 import { Children } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export const RootContainer = () => {
+  const { t } = useTranslation()
   return (
     <main className='flex flex-col bg-light-gradient dark:bg-dark-gradient'>
       <HeaderComponent />z
@@ -24,7 +26,7 @@ export const RootContainer = () => {
         style={{ borderTop: '1px solid black' }}
       >
         <span className='text-sm font-semibold uppercase text-slate-900 dark:text-slate-200'>
-          Code your way to the future with passion and perseverance !
+          {t('Code your way to the future with passion and perseverance !'.toUpperCase())}
         </span>
         <div className='flex flex-row gap-4 justify-center items-center'>
           {Children.toArray(

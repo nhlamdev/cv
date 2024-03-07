@@ -32,8 +32,7 @@ export const TechnicalSkillsComponent = () => {
               <div className='flex flex-col gap-2'>
                 <div className='flex flex-row gap-2 items-center'>
                   <BsXDiamondFill />
-
-                  <h3 className='font-semibold text-xs sm:text-sm uppercase'>{group.title}</h3>
+                  <h3 className='font-semibold text-xs sm:text-sm uppercase'>{t(group.title.toUpperCase())}</h3>
                 </div>
 
                 <div className='flex flex-row gap-2 pl-2 flex-wrap'>

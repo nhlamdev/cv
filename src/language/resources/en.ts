@@ -6,6 +6,11 @@ export const en = {
     EXPERIENCE: 'experience',
     YEAR_OLD: 'year old',
     WORK_CYCLE: 'WORK CYCLE',
+    WORKING: 'WORKING',
+    UPGRADE: 'UPGRADE',
+    RELAX: 'RELAX',
+    'CODE YOUR WAY TO THE FUTURE WITH PASSION AND PERSEVERANCE !':
+      'CODE YOUR WAY TO THE FUTURE WITH PASSION AND PERSEVERANCE !',
     SUMMARY_1:
       '👋 My name is Nguyen Hoang Lam, a passionate programmer, continuously on a journey of growth and exploration in a world of ever-changing and improving technology.',
     SUMMARY_2:

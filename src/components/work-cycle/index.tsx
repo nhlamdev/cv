@@ -67,14 +67,14 @@ export const WorkMakeComponent = () => {
                 opacity-0 invisible rounded-md px-4 py-1 text-md hidden lg:inline uppercase'
                 style={{ transition: 'all ease .5s', border: '1px solid white' }}
               >
-                {v.title}
+                {t(v.title.toUpperCase())}
               </span>
               <span
                 className='m-4 text-lg sm:text-xl md:text-2xl text-slate-900 dark:text-slate-100 
                   lg:hidden inline bg-slate-200 dark:bg-slate-800 px-8 py-2
                   rounded-md w-full sm:w-fit text-center uppercase'
               >
-                {v.title}
+                {t(v.title.toUpperCase())}
               </span>
             </div>
           )
